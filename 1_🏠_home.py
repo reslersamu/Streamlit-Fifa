@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 if "data" not in st.session_state:
-    df_data = pd.read_csv (r'C:\Users\Usuario\OneDrive - Governo do Estado do Rio Grande do Sul\Documents\Python\Cursos\Aulas\Projetos\Projeto Dash FIFA\CLEAN_FIFA23_official_data.csv', index_col=0)
+    df_data = pd.read_csv('CLEAN_FIFA23_official_data.csv', index_col=0)
     # filtro para contrato valido até a data atual
     df_data = df_data[df_data["Contract Valid Until"]>= datetime.today().year]
     # filtro para valores registrados
